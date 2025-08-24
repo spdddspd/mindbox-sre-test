@@ -1,0 +1,14 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: web-app-pdb
+  namespace: production
+  labels:
+    app: web-app
+    component: web
+spec:
+  minAvailable: 2  # Всегда должно быть доступно минимум 2 пода
+  selector:
+    matchLabels:
+      app: web-app
+      component: web
