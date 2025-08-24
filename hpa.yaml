@@ -1,4 +1,3 @@
-yaml - Horizontal Pod Autoscaler для автоматического масштабирования
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
